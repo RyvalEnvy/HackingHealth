@@ -46,15 +46,13 @@
 </div>
 </body>
 <script type="text/javascript">
-function LoadDoc() {
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			document.getElementById("demo").innerHTML = this.responseText;
-					}
-	};
-	xhttp.open("GET","OTApp.html", true);
-	xhttp.send();
-}
+possibleStates = ["Start_Screen", "Tutorial", "Level", "Game_Over", "Win", "Level_Select"];
+	function changeState(newState) {
+		for (x = 0; x < possibleStates.length; x++) {
+			document.getElementById(possibleStates[x]).style.display = "none";
+		}
+		document.getElementById(newState).style.display = "block";
+	}
+	changeState("Start_Screen");
 </script>
 </html>

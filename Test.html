@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+<p id ="demo"></p>
+<script type="text/javascript">
+//res.header("Access-Control-Allow-Origin", "*");
+//res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+var xhttp = new XMLHttpRequest();
+
+
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  else{
+  	document.getElementById("demo").innerHTML = "problem";
+  }
+};
+xhttp.open("GET", "https://us-central1-my-ot-stride.cloudfunctions.net/get-patients?foo=bar", true);
+xhttp.setRequestBody("Content-type", "application/x-www-form-urlencoded");
+
+xhttp.send();
+
+
+</script>
+</body>
+</html>
