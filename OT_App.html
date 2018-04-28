@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 	<title>Occupational Therapy App</title>
 	<link rel="stylesheet" type="text/css" href="Style.CSS">
 </head>
 <body>
+<div id="Home_Screen">
+<p>j</p>
+</div>
+<div id="Goals">
+	<h1>Goals + Progess</h1>
+	<table>
+		<tr>
+			<th>
+				<h2> Fitness Goal</h2>
+			</th>
+			<th>
+				<input type="text" name="Fitness_Goals">
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<h2> Work Goals</h2>
+			</th>
+			<th>
+				<input type="checkbox" name="Work_Goals" value="0">
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<h2>Self Care Goals</h2>
+			</th>
+			<th>
+				<input type="text" name="Self_Care_Goals">
+			</th>
+		</tr>
+
+<table>
+
+
+</div>
 <div>
-	<h1>Our WebApp</h1>
+
 </div>
 </body>
+<script type="text/javascript">
+function LoadDoc() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("demo").innerHTML = this.responseText;
+					}
+	};
+	xhttp.open("GET","OTApp.html", true);
+	xhttp.send();
+</script>
 </html>
