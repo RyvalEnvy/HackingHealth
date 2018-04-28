@@ -1,0 +1,61 @@
+
+HIP613 hackathon 2018
+Project #22: Connecting Occupational Therapists
+
+OT defines and manages Activities of Daily Living (AD): home setting, work setting.
+Prescribes wheelchair, power scooters, seating (pressure sores), ...
+
+Two barriers to usage of proposed app: comfort level with smartphones (excludes old
+people), insufficient cognition (exclues alzheimers, etc). Subpop that has all their cognition,
+and are young: Spinal chord injured have, Burns and plastic surgery, injured workers, some
+brain injuries (ABI), anxiety & ptsd & mental health.
+
+Two users, and associated needs:
+
+● OT: needs to see list of patients, and for a given patient,
+  1. See what activities assigned, and status info (done/not, feeling/pain).
+  2. Assign goals (from preset list), and for each, one or more ADL (manual entry);
+  ADL is description, clock time, duration, details special to patient (text only for
+  now).
+  3. Delete goals & ADLs.
+  4. Change an ADL: update description, time, details.
+  5. See and answer questions asked by the patient about an activity; get notified
+  when question received.
+  6. See/create/update/delete/publish/unpublish comments/notes for each ADL
+  assign (like something to watch for). Too advanced for hackathon.
+  7. Assume (for hackathon): same goals/activities/sequence/times every day.
+
+● Patient for the identified sub-pop (techno savvy and sufficient cognition): needs to
+see list of ADL, and for each:
+
+  1. See description, time, duration, details.
+  2. See published comments (too advanced for hackathon).
+  3. Ask a question about ADL, get notified when answer, remove question, edit
+  question (if not answered), copy question/answer text
+  4. Differentiate between not done yet, next ADL to do (highlight), and which
+  ones completed vs skipped
+  5. Get notified when it is time to do an ADL
+  6. Postpone ADL by a few minutes, Update status: done, skipped; update
+  pain/feeling
+
+Strategy:
+
+1. For hackathon, login is not important. This can be done later, nothing really
+interesting / different.
+2. Determine feature set for Minimum Viable Product, then determine subset of features
+for hackathon.
+3. Use balsamiq to design wireframes of UI.
+4. Use language and framework of choice for frontend (based on experience and/or
+interests): java, xamarin (C#), react native (javascript, html, css). Must pick one even
+if different skill sets.
+5. Define REST API; use swagger.io.
+6. Use Google Cloud Platform for backend: Cloud Functions for logic (REST endpoints)
+and Datastore for DB; or if using AWS, use API gateway, lambdas, and dynamodb.
+7. Define noSQL tables (Datastore in GCP, DynamoDB in AWS):
+a. user (username, role),
+b. OT (ID info -> patients -> ADLs -> info),
+c. Goals (possible ADLs? -> default description and default details)
+d. tokens.
+8. Breakdown into work items.
+9.
+Distribute work.
