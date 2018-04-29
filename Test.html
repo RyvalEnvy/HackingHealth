@@ -15,6 +15,8 @@ var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     document.getElementById("demo").innerHTML = this.responseText;
+    var obj = JSON.parse(this.responseText);
+    console.log(obj[0])
   }
   else{
   	document.getElementById("demo").innerHTML = "problem";
@@ -25,33 +27,6 @@ xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 xhttp.send();
 
-
-/*var request = new XMLHttpRequest();
-var path="https://us-central1-my-ot-stride.cloudfunctions.net/get-patients?foo=bar";
-request.onreadystatechange=state_change;
-
-request.open("GET", path, true);
-request.setRequestHeader("Referer", "http://www.google.com");
-//request.setRequestHeader("User-Agent", "Mozilla/5.0");
-request.setRequestHeader("Accept","text/plain");
-request.setRequestHeader("Content-Type","text/plain");
-
-request.send(null);
-    function state_change()
-{
-if (request.readyState==4)
-  {// 4 = "loaded"
-  if (request.status==200)
-    {// 200 = OK
-    // ...our code here...
-    alert('ok');
-    }
-  else
-    {
-    alert("Problem retrieving XML data");
-    }
-  }
-}*/
 
 </script>
 </body>

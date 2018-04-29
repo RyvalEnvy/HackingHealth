@@ -6,53 +6,70 @@
 	<link rel="stylesheet" type="text/css" href="Style.CSS">
 </head>
 <body>
-<div id="Home_Screen">
-<p>j</p>
+<div id= "menu">
+    <div id= "menuButtonContainer">
+<img src="DailyReflection.jpg" onclick="changeState(DailyReflection)">
+<img src="OTGoals+Progress.jpg" onclick= "changeState('goals')">
+  <img src="Resources.jpg" onclick= "changeState(Resources)">
+  <img src="Plan.jpg" onclick= "changeState(Plan)">
+  <img src="Connect.jpg" onclick= "changeState(Connect)">
+  <img src="Settings.jpg" onclick= "changeState(Settings)">
 </div>
-<div id="Goals">
-	<h1>Goals + Progess</h1>
-	<table>
-		<tr>
-			<th>
-				<h2> Fitness Goal</h2>
-			</th>
-			<th>
-				<input type="text" name="fitnessGoals">
-			</th>
-		</tr>
-		<tr>
-			<th>
-				<h2> Work Goals</h2>
-			</th>
-			<th>
-				<input type="checkbox" name="workGoals" value="0">
-			</th>
-		</tr>
-		<tr>
-			<th>
-				<h2>Self Care Goals</h2>
-			</th>
-			<th>
-				<input type="text" name="selfCareGoals">
-			</th>
-		</tr>
+</div>
+<div id="goals">
 
-<table>
+<font face="trebuchet ms">
 
+<h1 style="text-align:center;font-size:60px;">Goals</h1>
+	<hr>
+	<br>
+<form  style= "font-size:30px" action="">
+<input type="checkbox" name="vehicle" value="run5k"><a href="#" onclick="changeState('subGoals')">Run 5k</a>
+	<br>
+	<br>
+<input type="checkbox" name="vehicle" value="work"><a href="#">Return to work full time</a><br>
+	<br>
+<input type="checkbox" name="vehicle" value="garden"><a href="#">Plant a garden</a><br>
+	<br>
+<input type="checkbox" name="vehicle" value="smoke" ><a href="#">Stop smoking</a><br>
+	<br>
+<input type="checkbox" name="vehicle" value="work" ><a href="#">Lower blood cholesterol</a><br>
+</form>
 
 </div>
-<div>
+
+<div id="subGoals">
+    <font face ="trebuchet ms">
+<h1 style="text-align:center;font-size:60px;"> Run 5k </h1>
+<hr>
+        <p> <form style= "font-size: 30px" action=" / action_page.php" method="get"> <input type="checkbox" name="vehicle" value="block"> Walk around the block
+            <br>
+            <br>
+         <form action=" / action_page.php" method="get"> <input type="checkbox" name="vehicle" value="blocks"> Walk around 2 blocks
+            <br>
+            <br>
+         <form action=" / action_page.php" method="get"> <input type="checkbox" name="vehicle" value="jogstreet"> Jog down the street
+            <br>
+            <br>
+         <form action=" / action_page.php" method="get"> <input type="checkbox" name="vehicle" value="jogblock"> Jog around the block
+            <br>
+            <br>
+
+         <font color="#616A6B"> + Add weekly goal...</font></p> </font>
+
 
 </div>
-</body>
 <script type="text/javascript">
-possibleStates = ["Start_Screen", "Tutorial", "Level", "Game_Over", "Win", "Level_Select"];
-	function changeState(newState) {
-		for (x = 0; x < possibleStates.length; x++) {
-			document.getElementById(possibleStates[x]).style.display = "none";
-		}
-		document.getElementById(newState).style.display = "block";
-	}
-	changeState("Start_Screen");
+possibleStates = ["menu", "goals", "subGoals"];
+    function changeState(newState) {
+        for (x = 0; x < possibleStates.length; x++) {
+            document.getElementById(possibleStates[x]).style.display = "none";
+        }
+        document.getElementById(newState).style.display = "block";
+    }
+    changeState("menu");
 </script>
 </html>
+
+
+<p>hugaulyglo <span id = 'x'>iui</span></p>
