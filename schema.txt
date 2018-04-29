@@ -1,0 +1,101 @@
+users =
+[
+  {
+    "id": "1",
+    "username": "ot1",
+    "full_name": "Mathew",
+    "role: "ot"
+  },
+  {
+    "id": "2",
+    "username": "ot2",
+    "full_name": "Karen",
+    "role: "ot"
+  },
+  {
+    "id": "3",
+    "username": "patient1",
+    "full_name": "Joe",
+    "role: "patient"
+  },
+  {
+    "id": "4",
+    "username": "patient2",
+    "full_name": "Jane",
+    "role: "patient"
+  },
+  {
+    "id": "5",
+    "username": "patient3",
+    "full_name": "Sally",
+    "role: "patient"
+  },
+]
+
+therapists = 
+[
+  {
+    "id": "1",
+    "patients": [
+      {
+        "id": "3", 
+        "goals": [
+          {
+            "title": "Run 5K",
+            "weeklygoals": [
+              {
+                "title": "Walk around the block",
+                "activities": [
+                  {
+                    "title": "walk to end of driveway",
+                    "rating": "difficult",
+                    "comment": "By the time I was halfway down the driveway, I was out of breath and had to sit down."
+                  },
+                  {
+                  "title": "do physio stretches",
+                  },
+                ]
+              },
+              {
+                "title": "Walk 2 blocks",
+                "activities": [
+                ]
+              },
+              {
+                "title": "Jog 1 block",
+                "activities": [
+                ]
+              },
+            ]
+          },
+          {
+            "title": "Go to work full time",
+            "weeklygoals": [
+              {
+                "title": "Go out for an entire day",
+                "activities": [
+                  {
+                    "title": "Work 2 hours outside", 
+                  },
+                  {
+                    "title": "Go on computer for one hour",
+                  }
+                ]
+              },
+              {
+                "title": "Go out for 2 days",
+                "activities": [
+                ]
+              },
+              {
+                "title": "Go out for a whole week",
+                "activities": [
+                ]
+              },
+            ]
+          }
+        ]
+      },
+    ]
+  },
+]
